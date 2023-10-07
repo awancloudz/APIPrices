@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  line-height: 24px;
+}
+
+nav {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 7.2em;
+  left: -1.7em;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ffe8d6;
+  border: 1px solid #000;
+}
+
+nav ul li a,
+nav ul li a:hover,
+  nav ul li a:visited {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+code,
+pre code {
+  font-family: "DM Mono", monospace;
+  font-size: 1em;
+}
+
+code,
+pre {
+  background-color: #222;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.docs-row {
+  display: inline-flex;
+  align-items: baseline;
+
+  background-color: #ffe5d9;
+  border: 1px solid #000;
+  border-radius: 10px;
+  
+  margin: 10px 10% 0 10%;
+  width: 79%;
+}
+
+.docs-row:last-child {
+  margin-bottom: 10px;
+}
+
+.col {
+  padding: 10px;
+  flex-grow: 1;
+  width: 30%;
+  max-width: 33%;
+
+  position: sticky;
+  top: 0;
+}
+
+.col-periods {
+  padding: 0;
+}
+
+.row-period {
+  display: flex;
+  flex: 1;
+}
+
+.col-period {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.col-period:last-child { 
+  border-radius: 0 10px 10px 0;
+}
+
+.col-period code {
+  font-size: 13px;
+}
+
+.yes {
+  background-color: #2a9d8f;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.no {
+  background-color: #e63946;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+p,
+pre {
+  margin: 0;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.example-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 24px;
+
+  user-select: none;
+}
+
+footer strong {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+footer a,
+footer a:visited,
+footer a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+footer:hover strong {
+  opacity: 1;
+}
+
+footer #logo i {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  background-color:none;
+  transition: all .5s ease;
+
+  border: 1px solid #000;
+
+  display: inline-grid;
+  place-items: center;
+}
+
+footer:hover #logo i {
+  background-color: #ffe03a;
+}
