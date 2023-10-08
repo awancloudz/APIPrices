@@ -13,9 +13,9 @@ app.set("views", __dirname);
 app.use(express.static("public"));
 app.use(cors());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
-const uri = process.env.URI || "http://localhost:3000";
+const uri = process.env.URI || "http://localhost:3001";
 
 // first testing
 app.get("/", (request, response) => {
@@ -204,12 +204,13 @@ app.get("/prices/:period", async (request, response) => {
       delete blend_data.data.blend["spreadsheet_name"];*/
 
       jsonprice = {
+        id: blend_data.data.blend.id,
         name: blend_data.data.blend.blend_name,
         last_price:  blend_data.data.last_price,
         change_percent: blend_data.data.change_percent,
         change: blend_data.data.change,
       }
-      console.log(jsonprice);
+      //console.log(blend_data.data);
       dataAll.push(jsonprice);
     }
     response.status(200).json(dataAll);
@@ -222,7 +223,7 @@ app.get("/prices/:period", async (request, response) => {
   }
 });
 
-app.get("/testprice",(request, response) =>{
+// app.get("/testprice",(request, response) =>{
 //   let url = 'https://api.oilpriceapi.com/v1/prices/past_week/?by_type=daily_average_price'
 //   const headers = {
 //   'Authorization': 'Token d580687f774d6921563973c734b445d4',
@@ -232,7 +233,7 @@ app.get("/testprice",(request, response) =>{
 //   fetch(url, { headers })
 //     .then(response => response.json())
 //     .then(price => console.log(price))
-});
+// });
 
 app.listen(PORT, () => {
   console.log(`listening to http://localhost:${PORT}`);
